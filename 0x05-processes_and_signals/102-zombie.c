@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/type.h>
+#include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
 
@@ -15,11 +15,11 @@ int infinite_while(void)
 	{
 		sleep(1);
 	}
-	return (0);'
+	return (0);
 }
 
 /**
- * main - Creates five zombies processes.
+ * main - Creates five zombie processes.
  *
  * Return: Always 0.
  */
@@ -33,7 +33,7 @@ int main(void)
 		pid = fork();
 		if (pid > 0)
 		{
-			print("Zombie process created, PID: &d\n", pid);
+			printf("Zombie process created, PID: %d\n", pid);
 			sleep(1);
 			count++;
 		}
